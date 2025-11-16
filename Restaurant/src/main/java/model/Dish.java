@@ -9,10 +9,12 @@ package model;
  * @author Admin
  */
 public class Dish {
+
     private int id;
     private String name;
     private String category;
     private float price;
+    private String unit;
     private String description;
 
     public Dish() {
@@ -67,15 +69,12 @@ public class Dish {
         this.description = description;
     }
 
-    // ===== toString() =====
-    @Override
-    public String toString() {
-        return "Dish{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", category='" + category + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
+    public String getUnit() {
+        return unit;
     }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+    
 }
