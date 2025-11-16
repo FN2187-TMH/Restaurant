@@ -21,14 +21,32 @@ public class DishDAO extends DAO {
     public boolean addDish(Dish dish) {
         String sql = "INSERT INTO tblDish (name, description, price, category) VALUES (?, ?, ?, ?)";
 
-        try (PreparedStatement ps = conn.prepareStatement(sql)) {
-            ps.setString(1, dish.getName());
-            ps.setString(2, dish.getDescription());
-            ps.setDouble(3, dish.getPrice());
-            ps.setString(4, dish.getCategory());
+        try {
+            // Bắt đầu transaction
+            conn.setAutoCommit(false);
 
-            int rows = ps.executeUpdate();
-            return rows > 0; // thành công nếu có ít nhất 1 dòng được thêm
+            try (PreparedStatement ps = conn.prepareStatement(sql)) {
+                ps.setString(1, dish.getName());
+                ps.setString(2, dish.getDescription());
+                ps.setDouble(3, dish.getPrice());
+                ps.setString(4, dish.getCategory());
+
+                int rows = ps.executeUpdate();
+
+                // Commit nếu insert thành công
+                conn.commit();
+
+                return rows > 0;
+
+            } catch (SQLException e) {
+                // Rollback nếu xảy ra lỗi
+                conn.rollback();
+                e.printStackTrace();
+                return false;
+            } finally {
+                // Khôi phục auto-commit về true
+                conn.setAutoCommit(true);
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
