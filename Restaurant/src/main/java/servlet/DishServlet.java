@@ -47,6 +47,7 @@ public class DishServlet extends HttpServlet {
             String name = request.getParameter("name");
             String category = request.getParameter("category");
             String priceStr = request.getParameter("price");
+            String unit = request.getParameter("unit");
             String description = request.getParameter("description");
 
             float price = 0;
@@ -61,6 +62,7 @@ public class DishServlet extends HttpServlet {
             dish.setName(name);
             dish.setDescription(description);
             dish.setPrice(price);
+            dish.setUnit(unit);
             dish.setCategory(category);
 
             request.setAttribute("dish", dish);
@@ -71,6 +73,7 @@ public class DishServlet extends HttpServlet {
             String name = request.getParameter("name");
             String category = request.getParameter("category");
             String priceStr = request.getParameter("price");
+            String unit = request.getParameter("unit");
             String description = request.getParameter("description");
 
             float price = 0;
@@ -85,6 +88,7 @@ public class DishServlet extends HttpServlet {
             dish.setName(name);
             dish.setCategory(category);
             dish.setPrice(price);
+            dish.setUnit(unit);
             dish.setDescription(description);
 
             // 🔹 Lưu vào database qua DAO
