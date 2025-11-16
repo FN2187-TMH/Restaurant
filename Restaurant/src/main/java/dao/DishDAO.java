@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package dao;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import model.Dish;
 
-/**
- *
- * @author Admin
- */
 public class DishDAO extends DAO {
 
     public DishDAO() {
@@ -19,7 +11,7 @@ public class DishDAO extends DAO {
     }
 
     public boolean addDish(Dish dish) {
-        String sql = "INSERT INTO tblDish (name, description, price, category) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO tblDish (name, description, price, category, unit) VALUES (?, ?, ?, ?, ?)";
 
         try {
             // Bắt đầu transaction
@@ -30,10 +22,10 @@ public class DishDAO extends DAO {
                 ps.setString(2, dish.getDescription());
                 ps.setDouble(3, dish.getPrice());
                 ps.setString(4, dish.getCategory());
+                ps.setString(5, dish.getUnit()); 
 
                 int rows = ps.executeUpdate();
 
-                // Commit nếu insert thành công
                 conn.commit();
 
                 return rows > 0;
@@ -53,5 +45,4 @@ public class DishDAO extends DAO {
             return false;
         }
     }
-
 }
