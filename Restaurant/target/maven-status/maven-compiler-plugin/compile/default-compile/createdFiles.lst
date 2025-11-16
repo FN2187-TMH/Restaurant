@@ -1,0 +1,17 @@
+com\mycompany\restaurant\JakartaRestConfiguration.class
+servlet\DishServlet.class
+dao\DAO.class
+dao\DishDAO.class
+dao\TableDAO.class
+model\Dish.class
+dao\ReservationDAO.class
+model\Staff.class
+servlet\UserServlet.class
+com\mycompany\restaurant\resources\JakartaEE10Resource.class
+model\Table.class
+dao\UserDAO.class
+model\Reservation.class
+servlet\TableServlet.class
+model\Customer.class
+model\User.class
+servlet\ReservationServlet.class

@@ -1,0 +1,17 @@
+D:\NetBeans\Web\Restaurant\src\main\java\com\mycompany\restaurant\JakartaRestConfiguration.java
+D:\NetBeans\Web\Restaurant\src\main\java\com\mycompany\restaurant\resources\JakartaEE10Resource.java
+D:\NetBeans\Web\Restaurant\src\main\java\dao\DAO.java
+D:\NetBeans\Web\Restaurant\src\main\java\dao\DishDAO.java
+D:\NetBeans\Web\Restaurant\src\main\java\dao\ReservationDAO.java
+D:\NetBeans\Web\Restaurant\src\main\java\dao\TableDAO.java
+D:\NetBeans\Web\Restaurant\src\main\java\dao\UserDAO.java
+D:\NetBeans\Web\Restaurant\src\main\java\model\Customer.java
+D:\NetBeans\Web\Restaurant\src\main\java\model\Dish.java
+D:\NetBeans\Web\Restaurant\src\main\java\model\Reservation.java
+D:\NetBeans\Web\Restaurant\src\main\java\model\Staff.java
+D:\NetBeans\Web\Restaurant\src\main\java\model\Table.java
+D:\NetBeans\Web\Restaurant\src\main\java\model\User.java
+D:\NetBeans\Web\Restaurant\src\main\java\servlet\DishServlet.java
+D:\NetBeans\Web\Restaurant\src\main\java\servlet\ReservationServlet.java
+D:\NetBeans\Web\Restaurant\src\main\java\servlet\TableServlet.java
+D:\NetBeans\Web\Restaurant\src\main\java\servlet\UserServlet.java
